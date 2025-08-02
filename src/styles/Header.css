@@ -1,0 +1,136 @@
+/* Header.jsx */
+
+.header-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: min(-400px, -70%);
+  z-index: 2;
+  min-width: min(400px, 70%);
+  min-height: 100vh;
+  padding: 1.5rem 1rem;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  transition: right var(--transition-duration);
+}
+
+.nav.expanded {
+  right: 0;
+}
+
+.nav__navbar--close {
+  margin-bottom: 4rem;
+  padding: 0 2px;
+  background-color: transparent;
+  transform: translate(-8px, 11px); /* To position navbar icons to be at the same place */
+}
+
+.nav__list {
+  text-align: left;
+}
+
+.nav__item {
+  margin-left: 0.5rem;
+  margin-bottom: 3rem;
+  font-family: "Barlow Condensed";
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.link {
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: border var(--transition-duration);
+}
+
+.link:hover {
+  border-bottom: 2px solid var(--light-text);
+}
+
+.link__number {
+  margin-right: 0.5rem;
+  font-weight: 900;
+}
+
+@media (min-width: 48rem) {
+  /* Tablet & Desktop */
+  .header {
+    width: 95%;
+    max-width: 1750px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .header__logo {
+    margin-right: min(2%, 2rem);
+  }
+
+  .header__line {
+    position: relative;
+    z-index: 3;
+    flex-grow: 1;
+    height: 2px;
+    margin-right: -0.5rem;
+    opacity: 0.5;
+    background-color: var(--light-text);
+  }
+
+  .nav {
+    position: static;
+    top: unset;
+    right: unset;
+    flex-grow: 1;
+    min-width: fit-content;
+    min-height: fit-content;
+    max-width: 700px;
+    margin-right: -2.5vw;
+    padding: 0 2.5rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    transition: none;
+  }
+
+  .header__navbar--open,
+  .nav__navbar--close {
+    display: none;
+  }
+
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__item {
+    margin: 0;
+  }
+
+  .link {
+    width: fit-content;
+    padding: 2rem 0;
+    border-bottom: 5px solid transparent;
+    transition: border var(--transition-duration);
+  }
+
+  .link:hover,
+  .link.active {
+    border-bottom: 5px solid var(--light-text);
+  }
+}

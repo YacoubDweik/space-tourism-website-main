@@ -1,0 +1,149 @@
+/* Destination page styles */
+
+.section {
+  font-family: "Barlow Condensed";
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.destination {
+  background-image: url(/assets/images/destination/background-destination-mobile.jpg);
+}
+
+.section.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.section.center .section__title {
+  margin: 0;
+  padding: 0;
+}
+
+.section__title {
+  padding-bottom: 2rem;
+  font-family: "Barlow Condensed";
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.destination .section__image {
+  width: 60%;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.destination .image {
+  animation: rotate linear 20s infinite forwards;
+}
+
+.section__text {
+  font-family: "Barlow Condensed";
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.section__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.planet__button {
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition-duration);
+}
+
+.planet__button.active,
+.planet__button:hover {
+  border-bottom-color: var(--text-color);
+}
+
+.planet-name {
+  margin: 1.5rem 0;
+  font-family: "Bellefair";
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--light-text);
+}
+
+.planet-numbers,
+.planet-numbers > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.planet-numbers {
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.planet-numbers > div {
+  gap: 0.5rem;
+}
+
+.planet-numbers .title {
+  font-size: 0.925rem;
+}
+
+.planet-numbers .number {
+  font-family: "Bellefair";
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--light-text);
+}
+
+@media (min-width: 48rem) {
+  /* Tablet */
+  .destination {
+    background-image: url(/assets/images/destination/background-destination-tablet.jpg);
+  }
+
+  .destination .section__image {
+    width: fit-content;
+    margin: 0;
+  }
+
+  .section__image {
+    max-width: 35%;
+  }
+
+  .section:not(.home) .section__text {
+    max-width: 55%;
+  }
+
+  .section__buttons {
+    justify-content: flex-start;
+  }
+
+  .planet-numbers {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 2rem 0 0;
+  }
+
+  .planet-numbers > div {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 62rem) {
+  /* Desktop */
+  .destination {
+    background-image: url(/assets/images/destination/background-destination-desktop.jpg);
+  }
+}

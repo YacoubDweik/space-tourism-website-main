@@ -1,0 +1,139 @@
+/* Home page styles */
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  justify-items: center;
+  min-height: 100vh;
+  padding-top: 6.75rem;
+  padding-bottom: 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 50%;
+}
+
+.home {
+  grid-template-rows: 1fr;
+  align-items: center;
+  background-image: url(/assets/images/home/background-home-mobile.jpg);
+}
+
+.section__body {
+  max-width: 450px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.home .section__text {
+  font-family: "Bellefair";
+}
+
+.section__image {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.home .section__text {
+  padding: 1rem;
+}
+
+.home .section__image {
+  padding: 1rem 2rem 2rem;
+}
+
+.text {
+  font-family: "Barlow Condensed";
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.intro {
+  letter-spacing: 2px;
+}
+
+.space-word {
+  display: block;
+  font-family: "Bellefair";
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--light-text);
+}
+
+.info {
+  font-family: "Barlow";
+  font-size: 1rem;
+  text-transform: none;
+}
+
+.explore-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  font-family: "Bellefair";
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--dark-text);
+  background-color: var(--light-text);
+  border-radius: 50%;
+  transition: var(--transition-duration);
+}
+
+.explore-link:hover {
+  transform: scale(1.1);
+  opacity: 0.75;
+}
+
+.explore-link::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--text-color);
+  border-radius: 100%;
+  animation: 2s ease-in-out 0s infinite normal none running expand-border;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 48rem) {
+  /* Tablet */
+  .home {
+    background-image: url(/assets/images/home/background-home-tablet.jpg);
+  }
+
+  .section {
+    padding-top: 9.75rem;
+    padding-bottom: 1rem;
+  }
+
+  .section__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: none;
+    text-align: left;
+  }
+
+  .section__text {
+    max-width: 450px;
+    margin: 0;
+  }
+
+  .section__image {
+    max-width: none;
+    margin: 0;
+  }
+}
+
+@media (min-width: 62rem) {
+  /* Desktop */
+  .home {
+    background-image: url(/assets/images/home/background-home-desktop.jpg);
+  }
+}

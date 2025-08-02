@@ -1,0 +1,88 @@
+.technology {
+  background-image: url(/assets/images/technology/background-technology-mobile.jpg);
+}
+
+.technology .section__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.technology .section__image {
+  order: -1;
+}
+
+.technology .section__buttons {
+  padding: 1rem 0 2rem;
+}
+
+.tech__button {
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 1px solid var(--light-text);
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: var(--transition-duration);
+}
+
+.tech__button.active,
+.tech__button:hover {
+  opacity: 1;
+}
+
+.technology .term {
+  font-family: "Barlow";
+  font-size: 1rem;
+}
+
+.tech-name {
+  padding: 2rem 0 1rem;
+  font-family: "Bellefair";
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--light-text);
+}
+
+@media (min-width: 48rem) {
+  /* Tablet */
+  .technology {
+    padding-top: 10rem;
+    background-image: url(/assets/images/technology/background-technology-tablet.jpg);
+  }
+
+  .technology .section__body {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .technology .section__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 2rem;
+    max-width: 50%;
+  }
+
+  .technology .section__buttons {
+    flex-direction: column;
+  }
+
+  .technology .section__image {
+    width: 40%;
+    max-width: 425px;
+  }
+
+  .technology .section__image {
+    order: 0;
+  }
+}
+
+@media (min-width: 62rem) {
+  /* Desktop */
+  .technology {
+    background-image: url(/assets/images/technology/background-technology-desktop.jpg);
+  }
+}
